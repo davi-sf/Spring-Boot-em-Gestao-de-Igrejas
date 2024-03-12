@@ -5,7 +5,7 @@ Este é um projeto em Spring Boot em desenvolvimento para auxiliar na gestão de
 ## Funcionalidades
 
 - CRUD de membros da igreja:
-  - Criação, leitura, atualização e exclusão de membros.
+  - Criação, listagem, atualização e exclusão de membros.
 - Aniversariantes dos próximos 7 dias:
   - Consulta para obter os membros que estarão celebrando seus aniversários nos próximos 7 dias.
 
@@ -13,7 +13,6 @@ Este é um projeto em Spring Boot em desenvolvimento para auxiliar na gestão de
 
 - Spring Boot: Framework Java para criar aplicativos baseados em Java de forma rápida e fácil.
 - PostgreSQL: Sistema de gerenciamento de banco de dados relacional.
-- Java Persistence API (JPA): API do Java que permite mapear objetos Java para tabelas de banco de dados.
 - Spring Data JPA: Abordagem da Spring para acessar facilmente os dados de um banco de dados com o Spring MVC.
 - HATEOAS: Abordagem para criar APIs RESTful que são navegáveis e autoexplicativas.
 - Insomnia: Ferramenta para testar requisições de API.
