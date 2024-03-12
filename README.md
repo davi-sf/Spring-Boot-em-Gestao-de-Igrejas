@@ -31,4 +31,5 @@ Se você deseja contribuir para este projeto, sinta-se à vontade para abrir uma
 ---
 
 Este projeto ainda está em desenvolvimento e novas funcionalidades serão adicionadas no futuro. Se você tiver alguma sugestão ou encontrar algum problema, não hesite em entrar em contato.
+Feito com foco principal em estudos.
 
