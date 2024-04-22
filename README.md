@@ -12,6 +12,11 @@ O projeto é uma aplicação desenvolvida em Spring Boot para auxiliar na gestã
         - Permitir que membros da igreja sejam associados a um ministério específico. 
 - Aniversariantes dos próximos 7 dias:
   - Consulta para obter os membros que estarão celebrando seus aniversários nos próximos 7 dias.
+- Novo Recurso: Enviar E-mails aos Membros:
+  -  Este recurso, ainda em fase de testes, permite enviar e-mails aos membros da igreja. É possível enviar e-mails individuais para
+membros específicos ou e-mails para todos os membros de uma vez. O envio de e-mails é feito através do serviço Mailtrap, que é uma
+ferramenta de simulação de e-mails para testes em ambientes de desenvolvimento.
+  - Para utilizar o recurso de envio de e-mails, é necessário criar uma conta no Mailtrap e configurar suas credenciais no arquivo application.properties ou application.yml do projeto Spring Boot.
 
 ## Tecnologias Utilizadas
 
