@@ -6,6 +6,10 @@ Este é um projeto em Spring Boot em desenvolvimento para auxiliar na gestão de
 
 - CRUD de membros da igreja:
   - Criação, listagem, atualização e exclusão de membros.
+- Novo Recurso: CRUD de Ministérios
+   - Criação, listagem, atualização e exclusão de ministérios.
+   - Atribuir Membros a Ministérios:
+        - Permitir que membros da igreja sejam associados a um ministério específico. 
 - Aniversariantes dos próximos 7 dias:
   - Consulta para obter os membros que estarão celebrando seus aniversários nos próximos 7 dias.
 
