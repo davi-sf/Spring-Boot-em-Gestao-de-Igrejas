@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -28,4 +30,12 @@ public class MemberService {
         member.setMinistry(ministry);
         memberRepository.save(member);
     }
+
+    public List<MemberModel> getAllMembers() {
+        return memberRepository.findAll();
+    }
+
+
+
+
 }

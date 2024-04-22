@@ -20,6 +20,8 @@ public class MemberModel extends RepresentationModel<MemberModel> implements Ser
     private String address;
     private boolean hasWhatsapp;
 
+    private String email;
+
     @ManyToOne
     @JoinColumn(name = "ministry_id")
     private MinistryModel ministry;
@@ -78,5 +80,13 @@ public class MemberModel extends RepresentationModel<MemberModel> implements Ser
 
     public void setMinistry(MinistryModel ministry) {
         this.ministry = ministry;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
