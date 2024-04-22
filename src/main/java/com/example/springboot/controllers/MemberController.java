@@ -2,7 +2,7 @@ package com.example.springboot.controllers;
 
 import com.example.springboot.dtos.MemberRecordDto;
 import com.example.springboot.models.MemberModel;
-import com.example.springboot.repositories.MemberRespository;
+import com.example.springboot.repositories.MemberRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,33 +23,33 @@ import static  org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn
 public class MemberController  {
 
     @Autowired
-    MemberRespository memberRespository;
+    MemberRepository memberRepository;
 
     @PostMapping("/members")
     public ResponseEntity<MemberModel> registerMember(@RequestBody @Valid MemberRecordDto memberRecordDto){
         var memberModel = new MemberModel();
         BeanUtils.copyProperties(memberRecordDto, memberModel);
-        return ResponseEntity.status(HttpStatus.CREATED).body(memberRespository.save(memberModel));
+        return ResponseEntity.status(HttpStatus.CREATED).body(memberRepository.save(memberModel));
 
     }
 
     @GetMapping("/members")
     public ResponseEntity<List<MemberModel>> getAllMembers(){
-        List<MemberModel> membersList = memberRespository.findAll();
+        List<MemberModel> membersList = memberRepository.findAll();
         if(!membersList.isEmpty()){
             for(MemberModel member : membersList){
                 UUID id = member.getIdMember();
                 member.add(linkTo(methodOn(MemberController.class).getOneMember(id)).withSelfRel());
             }
         }
-        return ResponseEntity.status(HttpStatus.OK).body(memberRespository.findAll());
+        return ResponseEntity.status(HttpStatus.OK).body(memberRepository.findAll());
 
     }
 
 
     @GetMapping("/members/{id}")
     public ResponseEntity<Object>getOneMember(@PathVariable(value = "id")UUID id){
-        Optional<MemberModel> member0 = memberRespository.findById(id);
+        Optional<MemberModel> member0 = memberRepository.findById(id);
         if(member0.isEmpty()){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Membro não encontrado");
         }
@@ -60,26 +60,26 @@ public class MemberController  {
 
     @PutMapping("/members/{id}")
     public ResponseEntity<Object> updateMember (@PathVariable(value = "id")UUID id, @RequestBody @Valid MemberRecordDto memberRecordDto){
-        Optional<MemberModel> member0 = memberRespository.findById(id);
+        Optional<MemberModel> member0 = memberRepository.findById(id);
         if(member0.isEmpty()){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Membro não encontrado");
         }
 
         var memberModel = member0.get();
         BeanUtils.copyProperties(memberRecordDto, memberModel);
-        return ResponseEntity.status(HttpStatus.OK).body(memberRespository.save(memberModel));
+        return ResponseEntity.status(HttpStatus.OK).body(memberRepository.save(memberModel));
     }
 
 
     @DeleteMapping("/members/{id}")
     public ResponseEntity<Object> deleteProduct(@PathVariable(value = "id")UUID id){
-        Optional<MemberModel> memberO = memberRespository.findById(id);
+        Optional<MemberModel> memberO = memberRepository.findById(id);
         if(memberO.isEmpty()){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Membro não encontrado");
 
         }
 
-        memberRespository.delete(memberO.get());
+        memberRepository.delete(memberO.get());
         return ResponseEntity.status(HttpStatus.OK).body("Membro deletado");
 
 
@@ -94,7 +94,7 @@ public class MemberController  {
         String startDateString = startDate.format(formatter);
         String endDateString = endDate.format(formatter);
 
-        List<MemberModel> members = memberRespository.findByBirthBetween(startDateString, endDateString);
+        List<MemberModel> members = memberRepository.findByBirthBetween(startDateString, endDateString);
 
         return ResponseEntity.status(HttpStatus.OK).body(members);
     }

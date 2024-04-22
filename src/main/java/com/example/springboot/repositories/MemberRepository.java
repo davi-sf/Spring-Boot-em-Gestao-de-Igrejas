@@ -10,8 +10,7 @@ import java.util.UUID;
 
 
 @Repository
-public interface MemberRespository extends JpaRepository<MemberModel, UUID> {
+public interface MemberRepository extends JpaRepository<MemberModel, UUID> {
     List<MemberModel> findByBirthBetween(String startDate, String endDate);
     // Outros métodos de repositório...
 }
-
