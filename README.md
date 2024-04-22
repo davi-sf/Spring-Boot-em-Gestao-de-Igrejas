@@ -1,13 +1,22 @@
-# Spring-Boot-em-Gest-o-de-Igrejas
+# Spring-Boot-em-Gestao-de-Igrejas
 
-Este é um projeto em Spring Boot em desenvolvimento para auxiliar na gestão de igrejas. Até o momento, o projeto inclui um CRUD para membros.
+O projeto é uma aplicação desenvolvida em Spring Boot para auxiliar na gestão de igrejas e organizações religiosas.
 
 ## Funcionalidades
 
 - CRUD de membros da igreja:
   - Criação, listagem, atualização e exclusão de membros.
+- Novo Recurso: CRUD de Ministérios
+   - Criação, listagem, atualização e exclusão de ministérios.
+   - Atribuir Membros a Ministérios:
+        - Permitir que membros da igreja sejam associados a um ministério específico. 
 - Aniversariantes dos próximos 7 dias:
   - Consulta para obter os membros que estarão celebrando seus aniversários nos próximos 7 dias.
+- Novo Recurso: Enviar E-mails aos Membros:
+  -  Este recurso, ainda em fase de testes, permite enviar e-mails aos membros da igreja. É possível enviar e-mails individuais para
+membros específicos ou e-mails para todos os membros de uma vez. O envio de e-mails é feito através do serviço Mailtrap, que é uma
+ferramenta de simulação de e-mails para testes em ambientes de desenvolvimento.
+  - Para utilizar o recurso de envio de e-mails, é necessário criar uma conta no Mailtrap e configurar suas credenciais no arquivo application.properties
 
 ## Tecnologias Utilizadas
 
