@@ -1,6 +1,6 @@
-# Spring-Boot-em-Gest-o-de-Igrejas
+# Spring-Boot-em-Gestao-de-Igrejas
 
-Este é um projeto em Spring Boot em desenvolvimento para auxiliar na gestão de igrejas. Até o momento, o projeto inclui um CRUD para membros.
+O projeto é uma aplicação desenvolvida em Spring Boot para auxiliar na gestão de igrejas e organizações religiosas.
 
 ## Funcionalidades
 
