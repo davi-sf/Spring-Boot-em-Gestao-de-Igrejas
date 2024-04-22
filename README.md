@@ -16,7 +16,7 @@ O projeto é uma aplicação desenvolvida em Spring Boot para auxiliar na gestã
   -  Este recurso, ainda em fase de testes, permite enviar e-mails aos membros da igreja. É possível enviar e-mails individuais para
 membros específicos ou e-mails para todos os membros de uma vez. O envio de e-mails é feito através do serviço Mailtrap, que é uma
 ferramenta de simulação de e-mails para testes em ambientes de desenvolvimento.
-  - Para utilizar o recurso de envio de e-mails, é necessário criar uma conta no Mailtrap e configurar suas credenciais no arquivo application.properties ou application.yml do projeto Spring Boot.
+  - Para utilizar o recurso de envio de e-mails, é necessário criar uma conta no Mailtrap e configurar suas credenciais no arquivo application.properties
 
 ## Tecnologias Utilizadas
 
